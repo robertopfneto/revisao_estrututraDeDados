@@ -40,6 +40,6 @@ int main(){
 }
 
 void initPilha(Pilha *p){
-    p->top = -1
+    p->top = -1;
     
 }
