@@ -4,6 +4,7 @@
 using namespace std;
 #define MAX 10
 #define TIPOCHAVE int
+
 typedef struct{
     TIPOCHAVE chave;
 } REGISTRO;
@@ -69,8 +70,8 @@ bool isArrayConsistent(LISTA *l, int i){
 void insertList(LISTA *l, REGISTRO reg, int i){
     int j;
     for(j = l->n_elementos; j > i; j--)
-        l->A[j] = l->A[j-1];
-    l->A[i] = reg;
+        l->A[j] = l->A[j-1]; // move os registros para a esquerda para inserir na posiçao i sem sobreescrever
+    l->A[i] = reg; // insere registro naquela posição
     l->n_elementos ++;
 }
 
